@@ -14,7 +14,7 @@ def home():
     return send_from_directory(app.static_folder, "index.html")
 
 @app.route('/test', methods=['GET'])
-def home():
+def home1():
     return jsonify({"message": "SUCCESSFUL TEST"}), 200
 
 # Serve favicon
