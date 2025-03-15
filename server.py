@@ -22,7 +22,7 @@ def home1():
 def favicon():
     return jsonify({"message": "STOP FAVICON"}), 200
 
-@app.route('/create-file', methods=['POST'])
+@app.route('/create-file', methods=['POST', 'OPTIONS'])
 def create_file():
     try:
         data = request.json
