@@ -6,7 +6,7 @@ import chefff
 
 app = Flask(__name__, static_folder="./dist/", static_url_path="/") 
 
-CORS(app, resources={r"/*": {"origins": "https://unihack2025-tomichong-tomi-chongs-projects.vercel.app"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 
 @app.route('/', methods=['GET'])
