@@ -48,7 +48,7 @@ def run_flow(message: str,
     if tweaks:
         payload["tweaks"] = tweaks
     if application_token:
-        headers = {"Authorization": "Bearer " + application_token, "Content-Type": "text/plain"}
+        headers = {"Authorization": "Bearer " + application_token, "Content-Type": "application/json", "Access-Control-Allow-Origin" : "*"}
     
     response = requests.post(api_url, json=payload, headers=headers)
     # print(response.status_code)
