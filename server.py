@@ -24,6 +24,7 @@ def favicon():
 
 @app.route('/create-file', methods=['POST', 'OPTIONS'])
 def create_file():
+    print("reached here")
     try:
         data = request.json
         # print(data)
