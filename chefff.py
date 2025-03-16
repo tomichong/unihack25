@@ -7,6 +7,7 @@ import json
 import requests
 from typing import Optional
 
+CORS(app, resources={r"/*": {"origins": ["https://unihack25.onrender.com", "https://unihack2025-tomichong-tomi-chongs-projects.vercel.app"]}}, supports_credentials=True)
 
 BASE_API_URL = "https://api.langflow.astra.datastax.com"
 LANGFLOW_ID = os.environ.get('LANGFLOW_ID')
