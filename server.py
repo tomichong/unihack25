@@ -27,6 +27,9 @@ def create_file():
     print("reached here")
     try:
         data = request.get_json(force=True)
+        if not data:
+            return jsonify({"error": "Invalid JSON format"}), 400
+
 
         # print(data)
         filter_option = data.get("filter_option")
