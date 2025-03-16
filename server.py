@@ -26,7 +26,8 @@ def favicon():
 def create_file():
     print("reached here")
     try:
-        data = request.json
+        data = request.get_json(force=True)
+
         # print(data)
         filter_option = data.get("filter_option")
         budget = data.get("budget")
